@@ -1,0 +1,25 @@
+$mainColor:#15023a;
+
+$mobileWidth:767px;
+$ipadminWidth:768px;
+$ipadmaxWidth:1023px;
+$ipadprominWidth:1024px;
+
+@mixin mobile{
+    @media (max-width: #{$mobileWidth}){
+        @content
+    }
+};
+
+@mixin ipad {
+    @media (max-width: #{$ipadmaxWidth}) and (min-width: #{$ipadminWidth}){
+        @content
+    }
+};
+
+@mixin ipadpro{
+    @media (min-width: #{$ipadprominWidth}){
+        @content
+    }
+}
+
